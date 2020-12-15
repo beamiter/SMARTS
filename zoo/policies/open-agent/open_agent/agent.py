@@ -491,7 +491,10 @@ class OpEnAgent(Agent):
             + [impatience, wps[0].speed_limit]
         )
 
-        resp = self.solver.run(solver_params, initial_guess=self.prev_solution)
+        resp = self.solver.run(
+            solver_params,
+            # initial_guess=self.prev_solution
+        )
 
         self.last_position = ego.position
 
